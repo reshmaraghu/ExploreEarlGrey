@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import EarlGrey
 @testable import ExploreEarlGrey
 
 class ExploreEarlGreyTests: XCTestCase {
@@ -24,7 +25,8 @@ class ExploreEarlGreyTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+		EarlGrey.select(elementWithMatcher: grey_keyWindow()).assert(with: grey_sufficientlyVisible())
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
