@@ -11,5 +11,5 @@ import Foundation
 struct Document {
 	var name: String?
 	var modifiedDate: String?
-	var creationDate: String?
+	var createdDate: String?
 }

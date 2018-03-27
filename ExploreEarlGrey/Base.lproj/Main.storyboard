@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,10 +14,14 @@
     <customFonts key="customFonts">
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Root View Controller-->
+        <!--Stories-->
         <scene sceneID="ptA-Gw-A6N">
             <objects>
                 <tableViewController id="tir-GZ-hdo" customClass="DocumentListingVC" customModule="ExploreEarlGrey" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,13 +30,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="documentCell" id="3Wd-Pc-QJa" customClass="DocumentCell" customModule="ExploreEarlGrey">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DocumentCell" rowHeight="80" id="3Wd-Pc-QJa" customClass="DocumentCell" customModule="ExploreEarlGrey" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Wd-Pc-QJa" id="CYN-bF-cuM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story.png" highlightedImage="story.png" translatesAutoresizingMaskIntoConstraints="NO" id="uo1-Pu-7Pv" userLabel="Image">
+                                            <rect key="frame" x="9.9999999999999964" y="7.9999999999999964" width="63.666666666666657" height="63.666666666666657"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="uo1-Pu-7Pv" secondAttribute="height" multiplier="1:1" id="prN-Fu-SFz"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="COz-Lm-Slc">
+                                            <rect key="frame" x="83.666666666666657" y="9.3333333333333357" width="320.33333333333337" height="61.000000000000007"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retail Sales" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nY-MC-oCm" userLabel="Name">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320.33333333333331" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last modified: 10/03/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJR-fi-AHl" userLabel="ModifiedDate">
+                                                    <rect key="frame" x="0.0" y="22" width="320.33333333333331" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created: 02/01/18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9p-e3-U31" userLabel="CreationDate">
+                                                    <rect key="frame" x="0.0" y="44" width="320.33333333333331" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="uo1-Pu-7Pv" firstAttribute="height" secondItem="CYN-bF-cuM" secondAttribute="height" multiplier="0.8" id="MjY-NQ-21a"/>
+                                        <constraint firstItem="COz-Lm-Slc" firstAttribute="trailing" secondItem="CYN-bF-cuM" secondAttribute="trailing" constant="-10" id="Sx7-ik-2AV"/>
+                                        <constraint firstItem="COz-Lm-Slc" firstAttribute="leading" secondItem="uo1-Pu-7Pv" secondAttribute="trailing" constant="10" id="UYQ-al-UcC"/>
+                                        <constraint firstItem="uo1-Pu-7Pv" firstAttribute="centerY" secondItem="CYN-bF-cuM" secondAttribute="centerY" id="cPa-hz-81D"/>
+                                        <constraint firstItem="COz-Lm-Slc" firstAttribute="centerY" secondItem="CYN-bF-cuM" secondAttribute="centerY" id="eKb-cj-dAT"/>
+                                        <constraint firstItem="uo1-Pu-7Pv" firstAttribute="leading" secondItem="CYN-bF-cuM" secondAttribute="leading" constant="10" id="j50-Ve-P7k"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="createdDate" destination="q9p-e3-U31" id="Fva-uS-0b1"/>
+                                    <outlet property="docImage" destination="uo1-Pu-7Pv" id="9HD-uI-Kst"/>
+                                    <outlet property="modifiedDate" destination="XJR-fi-AHl" id="R3k-gp-5OL"/>
+                                    <outlet property="name" destination="3nY-MC-oCm" id="Yfb-9n-LEV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,11 +89,11 @@
                             <outlet property="delegate" destination="tir-GZ-hdo" id="kfh-Pz-qRQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="POR-yB-IUD"/>
+                    <navigationItem key="navigationItem" title="Stories" id="POR-yB-IUD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mM-n0-F7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="133"/>
+            <point key="canvasLocation" x="1740.5797101449277" y="132.88043478260872"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pbF-gf-rp1">
@@ -52,6 +102,17 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HCP-Af-35H">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.36862745099999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.79215686269999996" green="0.89411764709999997" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.2666666667" green="0.36862745099999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="tir-GZ-hdo" kind="relationship" relationship="rootViewController" id="vaS-mn-8M2"/>
@@ -113,4 +174,7 @@
             <point key="canvasLocation" x="140" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="story.png" width="74" height="78"/>
+    </resources>
 </document>

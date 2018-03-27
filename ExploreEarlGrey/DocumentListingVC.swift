@@ -25,15 +25,18 @@ class DocumentListingVC: UITableViewController {
 	}
 
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if let cell = tableView.dequeueReusableCell(withIdentifier: "documentCell",
-													for: indexPath) as? DocumentCell {
+		if let cell = tableView.dequeueReusableCell(withIdentifier: "DocumentCell", for: indexPath) as? DocumentCell {
 			// Configure the cell...
-			cell.name?.text = documents?[indexPath.row].name
+			cell.name.text = documents?[indexPath.row].name
 			cell.modifiedDate?.text = documents?[indexPath.row].modifiedDate
-			cell.creationDate?.text = documents?[indexPath.row].creationDate
+			cell.createdDate?.text = documents?[indexPath.row].createdDate
 			return cell
 		} else {
 			return UITableViewCell()
 		}
+	}
+
+	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 80
 	}
 }
