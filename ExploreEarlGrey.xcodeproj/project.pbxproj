@@ -18,6 +18,10 @@
 		2060441F206901A100E49624 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060441E206901A100E49624 /* DocumentCell.swift */; };
 		20604421206903A000E49624 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20604420206903A000E49624 /* Document.swift */; };
 		20604423206A0F2700E49624 /* story.png in Resources */ = {isa = PBXBuildFile; fileRef = 20604422206A0F2700E49624 /* story.png */; };
+		20711A68206A5EBF008E25A1 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20711A67206A5EBF008E25A1 /* PageVC.swift */; };
+		20711A6C206A6006008E25A1 /* demo.css in Resources */ = {isa = PBXBuildFile; fileRef = 20711A69206A6006008E25A1 /* demo.css */; };
+		20711A6D206A6006008E25A1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 20711A6A206A6006008E25A1 /* index.html */; };
+		20711A6E206A6006008E25A1 /* default.js in Resources */ = {isa = PBXBuildFile; fileRef = 20711A6B206A6006008E25A1 /* default.js */; };
 		22714269AF272061D0971A70 /* Pods_ExploreEarlGreyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D508EDECE2BE91A31BB009F /* Pods_ExploreEarlGreyTests.framework */; };
 		5AD0003300326D146EA00229 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 18AC573ED02E0862E19A06EE /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		622DA2656CCF0E4357CEE3D3 /* Pods_ExploreEarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A26FF4A1FBAE70EC55D2C2 /* Pods_ExploreEarlGrey.framework */; };
@@ -88,6 +92,10 @@
 		20604420206903A000E49624 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		20604422206A0F2700E49624 /* story.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = story.png; sourceTree = "<group>"; };
 		20604426206A186B00E49624 /* EarlGrey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EarlGrey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20711A67206A5EBF008E25A1 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		20711A69206A6006008E25A1 /* demo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demo.css; sourceTree = "<group>"; };
+		20711A6A206A6006008E25A1 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		20711A6B206A6006008E25A1 /* default.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = default.js; sourceTree = "<group>"; };
 		319DAE1F78D427D6759CBED5 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		46103136570A694F2141C8ED /* Pods-ExploreEarlGrey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploreEarlGrey.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExploreEarlGrey/Pods-ExploreEarlGrey.release.xcconfig"; sourceTree = "<group>"; };
 		4AA75D969CABC90D73045484 /* Pods-ExploreEarlGrey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploreEarlGrey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExploreEarlGrey/Pods-ExploreEarlGrey.debug.xcconfig"; sourceTree = "<group>"; };
@@ -162,6 +170,7 @@
 				2060441A2068CE7E00E49624 /* DocumentListingVC.swift */,
 				2060441E206901A100E49624 /* DocumentCell.swift */,
 				20604420206903A000E49624 /* Document.swift */,
+				20711A67206A5EBF008E25A1 /* PageVC.swift */,
 			);
 			path = ExploreEarlGrey;
 			sourceTree = "<group>";
@@ -188,6 +197,9 @@
 		206044192068AB6F00E49624 /* Webapp-resources */ = {
 			isa = PBXGroup;
 			children = (
+				20711A6B206A6006008E25A1 /* default.js */,
+				20711A69206A6006008E25A1 /* demo.css */,
+				20711A6A206A6006008E25A1 /* index.html */,
 				20604422206A0F2700E49624 /* story.png */,
 			);
 			path = "Webapp-resources";
@@ -337,9 +349,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				206043F62068AA7100E49624 /* LaunchScreen.storyboard in Resources */,
+				20711A6C206A6006008E25A1 /* demo.css in Resources */,
 				20604423206A0F2700E49624 /* story.png in Resources */,
+				20711A6D206A6006008E25A1 /* index.html in Resources */,
 				206043F32068AA7100E49624 /* Assets.xcassets in Resources */,
 				206043F12068AA7100E49624 /* Main.storyboard in Resources */,
+				20711A6E206A6006008E25A1 /* default.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2060441F206901A100E49624 /* DocumentCell.swift in Sources */,
+				20711A68206A5EBF008E25A1 /* PageVC.swift in Sources */,
 				2060441B2068CE7E00E49624 /* DocumentListingVC.swift in Sources */,
 				206043EE2068AA7100E49624 /* ViewController.swift in Sources */,
 				206043EC2068AA7100E49624 /* AppDelegate.swift in Sources */,

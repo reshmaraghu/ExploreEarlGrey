@@ -81,6 +81,7 @@
                                     <outlet property="docImage" destination="uo1-Pu-7Pv" id="9HD-uI-Kst"/>
                                     <outlet property="modifiedDate" destination="XJR-fi-AHl" id="R3k-gp-5OL"/>
                                     <outlet property="name" destination="3nY-MC-oCm" id="Yfb-9n-LEV"/>
+                                    <segue destination="vDd-rv-R5F" kind="show" identifier="showWebView" id="pnu-lW-hLx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -94,6 +95,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mM-n0-F7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1740.5797101449277" y="132.88043478260872"/>
+        </scene>
+        <!--Page-->
+        <scene sceneID="enf-Dc-m9V">
+            <objects>
+                <viewController title="Page" id="vDd-rv-R5F" customClass="PageVC" customModule="ExploreEarlGrey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AWY-lo-yMN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="s5L-hD-7Yg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZ4-ec-vhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2597" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pbF-gf-rp1">
