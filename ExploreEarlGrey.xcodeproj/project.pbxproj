@@ -18,8 +18,6 @@
 		2060441F206901A100E49624 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2060441E206901A100E49624 /* DocumentCell.swift */; };
 		20604421206903A000E49624 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20604420206903A000E49624 /* Document.swift */; };
 		20604423206A0F2700E49624 /* story.png in Resources */ = {isa = PBXBuildFile; fileRef = 20604422206A0F2700E49624 /* story.png */; };
-		20711A07206A1A94008E25A1 /* EarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20711A04206A1A6C008E25A1 /* EarlGrey.framework */; };
-		20711A09206A1BEA008E25A1 /* EarlGrey.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20711A04206A1A6C008E25A1 /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,20 +35,6 @@
 			remoteGlobalIDString = 206043E72068AA7100E49624;
 			remoteInfo = ExploreEarlGrey;
 		};
-		20711A03206A1A6C008E25A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 207119FE206A1A6C008E25A1 /* EarlGrey.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FD1000E91C5B466F00B2DB0A;
-			remoteInfo = EarlGrey;
-		};
-		20711A05206A1A88008E25A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 207119FE206A1A6C008E25A1 /* EarlGrey.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FD1000E81C5B466F00B2DB0A;
-			remoteInfo = EarlGrey;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,7 +44,6 @@
 			dstPath = "$(TEST_HOST)/..";
 			dstSubfolderSpec = 0;
 			files = (
-				20711A09206A1BEA008E25A1 /* EarlGrey.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +68,6 @@
 		20604420206903A000E49624 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		20604422206A0F2700E49624 /* story.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = story.png; sourceTree = "<group>"; };
 		20604426206A186B00E49624 /* EarlGrey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EarlGrey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		207119FE206A1A6C008E25A1 /* EarlGrey.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EarlGrey.xcodeproj; path = ../EarlGrey/EarlGrey.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20711A07206A1A94008E25A1 /* EarlGrey.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +98,6 @@
 		206043DF2068AA7100E49624 = {
 			isa = PBXGroup;
 			children = (
-				207119FE206A1A6C008E25A1 /* EarlGrey.xcodeproj */,
 				206044192068AB6F00E49624 /* Webapp-resources */,
 				206043EA2068AA7100E49624 /* ExploreEarlGrey */,
 				206043FF2068AA7100E49624 /* ExploreEarlGreyTests */,
@@ -187,14 +167,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		207119FF206A1A6C008E25A1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				20711A04206A1A6C008E25A1 /* EarlGrey.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,7 +199,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				20711A06206A1A88008E25A1 /* PBXTargetDependency */,
 				206043FE2068AA7100E49624 /* PBXTargetDependency */,
 			);
 			name = ExploreEarlGreyTests;
@@ -290,12 +261,6 @@
 			mainGroup = 206043DF2068AA7100E49624;
 			productRefGroup = 206043E92068AA7100E49624 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 207119FF206A1A6C008E25A1 /* Products */;
-					ProjectRef = 207119FE206A1A6C008E25A1 /* EarlGrey.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				206043E72068AA7100E49624 /* ExploreEarlGrey */,
@@ -304,16 +269,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		20711A04206A1A6C008E25A1 /* EarlGrey.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = EarlGrey.framework;
-			remoteRef = 20711A03206A1A6C008E25A1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		206043E62068AA7100E49624 /* Resources */ = {
@@ -384,11 +339,6 @@
 			isa = PBXTargetDependency;
 			target = 206043E72068AA7100E49624 /* ExploreEarlGrey */;
 			targetProxy = 206044082068AA7100E49624 /* PBXContainerItemProxy */;
-		};
-		20711A06206A1A88008E25A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = EarlGrey;
-			targetProxy = 20711A05206A1A88008E25A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
