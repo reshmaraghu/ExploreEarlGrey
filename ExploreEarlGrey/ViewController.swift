@@ -28,7 +28,8 @@ class ViewController: UIViewController {
 			self.performSegue(withIdentifier: "showList", sender: self)
 		} else {
 			let alertController = UIAlertController(title: "Invalid Password!", message: "Please re-enter the correct password.", preferredStyle: .alert)
-			alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+			let defaultAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+			alertController.addAction(defaultAction)
 			alertController.view.accessibilityIdentifier = "invalid_password_alert"
 			self.present(alertController, animated: true, completion: nil)
 		}
