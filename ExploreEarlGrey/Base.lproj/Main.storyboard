@@ -169,7 +169,7 @@
                                             <color key="titleColor" red="0.792156862745098" green="0.89411764705882346" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="hor-e6-PRe" kind="show" identifier="showList" id="bXk-mD-Qzu"/>
+                                            <action selector="signInClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="4u9-SZ-CXu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -184,6 +184,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="Oaa-AL-UVg" id="4wL-QS-f0D"/>
+                        <segue destination="hor-e6-PRe" kind="show" identifier="showList" id="J1d-du-DWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

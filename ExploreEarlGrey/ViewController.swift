@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet public var password: UITextField!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
@@ -18,6 +20,17 @@ class ViewController: UIViewController {
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
+	}
+
+	@IBAction public func signInClicked() {
+		print("➡️ Sign in clicked")
+		if password.text == "Password1" {
+			self.performSegue(withIdentifier: "showList", sender: self)
+		} else {
+			let alertController = UIAlertController(title: "Invalid Password!", message: "Please re-enter the correct password.", preferredStyle: .alert)
+			alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+			self.present(alertController, animated: true, completion: nil)
+		}
 	}
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
