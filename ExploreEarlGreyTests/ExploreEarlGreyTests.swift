@@ -29,12 +29,18 @@ class ExploreEarlGreyTests: XCTestCase {
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).assert(with: grey_sufficientlyVisible())
 	}
 
-	func testSignIn() {
-		// This is an example of a functional test case.
-		// Use XCTAssert and related functions to verify your tests produce the correct results.
+	func testSignInSuccess() {
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("password_textField")).assert(with: grey_sufficientlyVisible())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).assert(with: grey_sufficientlyVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("password_textField")).perform(grey_typeText("Password1"))
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).perform(grey_tap())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("doc_listing_screen")).assert(with: grey_sufficientlyVisible())
+	}
+
+	func testSignInFailure() {
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).assert(with: grey_sufficientlyVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).perform(grey_tap())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("invalid_password_alert")).assert(with: grey_sufficientlyVisible())
 	}
     
     func testPerformanceExample() {
