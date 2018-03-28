@@ -15,7 +15,7 @@ class ExploreEarlGreyTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-		GREYAssertions.setValue(false, forKey: kGREYConfigKeyAnalyticsEnabled)
+		GREYConfiguration.sharedInstance().setValue(false, forConfigKey: kGREYConfigKeyAnalyticsEnabled)
     }
     
     override func tearDown() {
@@ -23,10 +23,18 @@ class ExploreEarlGreyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testWelcomeScreen() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-		EarlGrey.select(elementWithMatcher: grey_keyWindow()).assert(with: grey_sufficientlyVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).assert(with: grey_sufficientlyVisible())
+	}
+
+	func testSignIn() {
+		// This is an example of a functional test case.
+		// Use XCTAssert and related functions to verify your tests produce the correct results.
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).assert(with: grey_sufficientlyVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).perform(grey_tap())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("doc_listing_screen")).assert(with: grey_sufficientlyVisible())
 	}
     
     func testPerformanceExample() {

@@ -85,6 +85,9 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="doc_listing_screen"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="tir-GZ-hdo" id="Gwn-Zp-ppt"/>
                             <outlet property="delegate" destination="tir-GZ-hdo" id="kfh-Pz-qRQ"/>
@@ -168,6 +171,9 @@
                                         <state key="normal" title="Sign-in">
                                             <color key="titleColor" red="0.792156862745098" green="0.89411764705882346" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="sign_in_button"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signInClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="4u9-SZ-CXu"/>
                                         </connections>
