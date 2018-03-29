@@ -22,6 +22,7 @@
 		20711A6C206A6006008E25A1 /* demo.css in Resources */ = {isa = PBXBuildFile; fileRef = 20711A69206A6006008E25A1 /* demo.css */; };
 		20711A6D206A6006008E25A1 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 20711A6A206A6006008E25A1 /* index.html */; };
 		20711A70206B48AE008E25A1 /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 20711A6F206B48AE008E25A1 /* script.js */; };
+		20711A72206C912C008E25A1 /* DocumentListingVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20711A71206C912C008E25A1 /* DocumentListingVCTests.swift */; };
 		22714269AF272061D0971A70 /* Pods_ExploreEarlGreyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D508EDECE2BE91A31BB009F /* Pods_ExploreEarlGreyTests.framework */; };
 		5AD0003300326D146EA00229 /* EarlGrey.framework in EarlGrey Copy Files */ = {isa = PBXBuildFile; fileRef = 18AC573ED02E0862E19A06EE /* EarlGrey.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		622DA2656CCF0E4357CEE3D3 /* Pods_ExploreEarlGrey.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A26FF4A1FBAE70EC55D2C2 /* Pods_ExploreEarlGrey.framework */; };
@@ -96,6 +97,7 @@
 		20711A69206A6006008E25A1 /* demo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demo.css; sourceTree = "<group>"; };
 		20711A6A206A6006008E25A1 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		20711A6F206B48AE008E25A1 /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		20711A71206C912C008E25A1 /* DocumentListingVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentListingVCTests.swift; sourceTree = "<group>"; };
 		319DAE1F78D427D6759CBED5 /* EarlGrey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EarlGrey.swift; sourceTree = "<group>"; };
 		46103136570A694F2141C8ED /* Pods-ExploreEarlGrey.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploreEarlGrey.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExploreEarlGrey/Pods-ExploreEarlGrey.release.xcconfig"; sourceTree = "<group>"; };
 		4AA75D969CABC90D73045484 /* Pods-ExploreEarlGrey.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploreEarlGrey.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExploreEarlGrey/Pods-ExploreEarlGrey.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		206043FF2068AA7100E49624 /* ExploreEarlGreyTests */ = {
 			isa = PBXGroup;
 			children = (
+				20711A71206C912C008E25A1 /* DocumentListingVCTests.swift */,
 				206044002068AA7100E49624 /* ExploreEarlGreyTests.swift */,
 				206044022068AA7100E49624 /* Info.plist */,
 				319DAE1F78D427D6759CBED5 /* EarlGrey.swift */,
@@ -543,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				206044012068AA7100E49624 /* ExploreEarlGreyTests.swift in Sources */,
+				20711A72206C912C008E25A1 /* DocumentListingVCTests.swift in Sources */,
 				97A89C5D21A27307C948FE2F /* EarlGrey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

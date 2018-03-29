@@ -1,8 +1,8 @@
 //
-//  ExploreEarlGreyTests.swift
+//  DocumentListingVCTests.swift
 //  ExploreEarlGreyTests
 //
-//  Created by Raghu, Reshma L on 3/26/18.
+//  Created by Raghu, Reshma L on 3/29/18.
 //  Copyright © 2018 Raghu, Reshma L. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import XCTest
 import EarlGrey
 @testable import ExploreEarlGrey
 
-class ExploreEarlGreyTests: XCTestCase {
+class DocumentListingVCTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,24 +22,17 @@ class ExploreEarlGreyTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-	func testSignInSuccess() {
+    
+	func testTapOnDocument() {
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).assert(with: grey_sufficientlyVisible())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("password_textField")).assert(with: grey_sufficientlyVisible())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("password_textField")).perform(grey_tap())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("password_textField")).perform(grey_typeText("Password1"))
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button")).perform(grey_tap())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("doc_list_view")).assert(with: grey_sufficientlyVisible())
-	}
-
-	func testSignInFailure() {
-		let signInButton = EarlGrey.select(elementWithMatcher: grey_accessibilityID("sign_in_button"))
-		signInButton.assert(with: grey_sufficientlyVisible())
-		signInButton.perform(grey_tap())
-		let alert = EarlGrey.select(elementWithMatcher: grey_accessibilityID("invalid_password_alert"))
-		alert.assert(with: grey_sufficientlyVisible())
-		EarlGrey.select(elementWithMatcher: grey_text("Ok")).perform(grey_tap())
-		alert.assert(with: grey_notVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("document_cell_1")).assert(with: grey_sufficientlyVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("document_cell_1")).perform(grey_tap())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("page_view")).assert(with: grey_sufficientlyVisible())
 	}
     
     func testPerformanceExample() {

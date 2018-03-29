@@ -30,6 +30,7 @@ class DocumentListingVC: UITableViewController {
 			cell.name.text = documents?[indexPath.row].name
 			cell.modifiedDate?.text = documents?[indexPath.row].modifiedDate
 			cell.createdDate?.text = documents?[indexPath.row].createdDate
+			cell.accessibilityIdentifier = "document_cell_\(indexPath.row)"
 			return cell
 		} else {
 			return UITableViewCell()
@@ -38,5 +39,9 @@ class DocumentListingVC: UITableViewController {
 
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 80
+	}
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		print("➡️ Preparing for segue: \(String(describing: segue.identifier))")
 	}
 }
