@@ -16,6 +16,7 @@ class PageVC: UIViewController, WKUIDelegate, WKNavigationDelegate {
 		webView = WKWebView()
 		webView.uiDelegate = self
 		webView.navigationDelegate = self
+		webView.accessibilityIdentifier = "page_view"
 		view = webView
 	}
 
