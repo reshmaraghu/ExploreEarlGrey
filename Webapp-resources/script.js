@@ -1,3 +1,4 @@
+
 var myCanvas = document.getElementById('myCanvas');
 myCanvas.width = 500;
 myCanvas.height = 500;
@@ -107,3 +108,15 @@ var myPiechart = new Piechart(
     }
 );
 myPiechart.draw();
+
+document.getElementById("myLegend").addEventListener("click", call_native);
+
+var vizName = document.getElementById("vizName");
+function set_vizName (text) {
+  vizName.innerHTML = text;
+}
+
+function call_native () {
+  set_vizName("asked for " + vizName.innerHTML);
+  window.webkit.messageHandlers.PageVC.postMessage("Need vizName");
+}
