@@ -16,6 +16,7 @@ class DocumentListingVCTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
 		GREYConfiguration.sharedInstance().setValue(false, forConfigKey: kGREYConfigKeyAnalyticsEnabled)
+		GREYConfiguration.sharedInstance().setValue(60, forConfigKey: kGREYConfigKeyInteractionTimeoutDuration)
     }
     
     override func tearDown() {
@@ -33,6 +34,8 @@ class DocumentListingVCTests: XCTestCase {
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("document_cell_1")).assert(with: grey_sufficientlyVisible())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("document_cell_1")).perform(grey_tap())
 		EarlGrey.select(elementWithMatcher: grey_accessibilityID("page_view")).assert(with: grey_sufficientlyVisible())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("page_view")).assert(with: grey_interactable())
+		EarlGrey.select(elementWithMatcher: grey_accessibilityID("page_view")).perform(grey_javaScriptExecution(self.jsClickOnElementWithID(ID: "myLegend"), nil))
 	}
     
     func testPerformanceExample() {
@@ -41,5 +44,9 @@ class DocumentListingVCTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+
+	private func jsClickOnElementWithID(ID: String) -> String {
+		return "document.getElementById('myLegend').click()"
+	}
     
 }

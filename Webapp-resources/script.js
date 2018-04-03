@@ -111,12 +111,12 @@ myPiechart.draw();
 
 document.getElementById("myLegend").addEventListener("click", call_native);
 
-var vizName = document.getElementById("vizName");
-function set_vizName (text) {
-  vizName.innerHTML = text;
+function call_native () {
+  set_vizName("asked for vizname");
+  window.webkit.messageHandlers.PageVC.postMessage("Need vizName");
 }
 
-function call_native () {
-  set_vizName("asked for " + vizName.innerHTML);
-  window.webkit.messageHandlers.PageVC.postMessage("Need vizName");
+function set_vizName (text) {
+  var vizName = document.getElementById("vizName");
+  vizName.innerHTML = text;
 }
