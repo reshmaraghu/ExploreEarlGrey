@@ -19,6 +19,13 @@ h1{
   font-style: normal;
   color: #4e4e52;
 }
+h2{
+  font-size: 1.0em;
+  margin-left: 2.2em;
+  font-family: Helvetica;
+  font-style: normal;
+  color: #4e4e52;
+}
 @media screen and (max-width: 768px){
   body{
     background-color: rgba(0, 255, 0, 0.5);

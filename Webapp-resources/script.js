@@ -2,7 +2,34 @@
 var myCanvas = document.getElementById('myCanvas');
 myCanvas.width = 500;
 myCanvas.height = 500;
+myCanvas.addEventListener("click", function(e){
+  var mousePos = getMousePos(myCanvas, e);
+  var label = getdataLable(mousePos);
+  set_dataLabel(label);
+}, false);
 
+// Get the position of the mouse relative to the canvas
+function getMousePos(canvasDom, mouseEvent) {
+  var rect = canvasDom.getBoundingClientRect();
+  return {
+    x: mouseEvent.clientX - rect.left,
+    y: mouseEvent.clientY - rect.top
+  };
+}
+
+function getdataLable(mousePos) {
+  if (mousePos.x > 354 && mousePos.x < 697 && mousePos.y > 223 && mousePos.y < 447) {
+    return 'Shades: 32%'
+  } else if (mousePos.x > 205 && mousePos.x < 443 && mousePos.y > 273 && mousePos.y < 693) {
+    return 'Jackets: 37%'
+  } else if (mousePos.x > 286 && mousePos.x < 397 && mousePos.y > 227 && mousePos.y < 338) {
+    return 'T-shirts: 5%'
+  } else if (mousePos.x > 438 && mousePos.x < 691 && mousePos.y > 460 && mousePos.y < 691) {
+    return 'Trousers: 26%'
+  } else {
+    return ''
+  }
+}
 var ctx = myCanvas.getContext("2d");
 
 var myVinyls = {
@@ -119,4 +146,9 @@ function call_native () {
 function set_vizName (text) {
   var vizName = document.getElementById("vizName");
   vizName.innerHTML = text;
+}
+
+function set_dataLabel (text) {
+  var dataLabel = document.getElementById("dataLabel");
+  dataLabel.innerHTML = text;
 }
